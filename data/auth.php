@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $usuario = $_POST['usuario'];
         $password = $_POST['password'];
         $sql = "SELECT id, nombre, username, estado
-                FROM `usuario`
+                FROM `usuarios`
                 WHERE username='$usuario' AND password='$password'";
         $user = $db->query($sql)->fetch(PDO::FETCH_ASSOC);
         if($user){
